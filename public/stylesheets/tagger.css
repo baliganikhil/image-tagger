@@ -1,0 +1,106 @@
+body {
+	font-family: 'Open Sans';
+}
+
+.modal_backdrop {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+}
+
+.page_header {
+	height: 50px;
+}
+
+.brand {
+	margin-left: 30px;
+	font-size: 20px;
+	color: #aaa;
+}
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.option {
+	width: 350px;
+}
+
+.tag_name {
+	height: 50px;
+	width: 350px;
+	border-radius: 3px;
+	border: solid 1px #ccc;
+	margin-top: 30px;
+	font-size: 20px;
+	padding-left: 10px;
+	color: #666;
+}
+
+.my_tag_container {
+	position: absolute;
+	right: 30px;
+	top: 50px;
+	padding: 20px;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #eee;
+	color: #333;
+	width: 200px;
+}
+
+.my_tag_container table {
+	width: 100%;
+}
+
+.timer_container {
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	padding: 20px;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #eee;
+	color: #333;
+	width: 200px;
+	text-align: center;
+	font-size: 3em;
+	font-weight: 300;
+}
+
+.ul_my_tags {
+	list-style-type: none;
+	padding: 0;
+}
+
+.tag {
+	list-style-type: none;
+	border: solid 1px #eee;
+	border-radius: 20px;
+	text-align: center;
+	color: #666;
+	background: #fafafa;
+	margin: 2px;
+	display: inline-block;
+	font-size: 11px;
+	padding: 3px 11px;
+}
+
+.tag_count, .total_tag_count {
+	font-size: 3em;
+	font-weight: 300;
+}
+
+.total_tag_count {
+	color: blue;
+}
+
+.user_list td {
+	padding: 10px;
+	font-size: 13px;
+	color: #555;
+}

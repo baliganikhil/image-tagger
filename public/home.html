@@ -1,0 +1,73 @@
+<html ng-app="TaggerModule">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular.min.js"></script>
+</head>
+<body ng-controller="TagController">
+
+<div class="page_header">
+	<span class="brand">Image Tagger Project</span>
+</div>
+
+<div class="container">
+	<div>
+		<img ng-src="{{img_url}}" class="option">
+
+		<div>
+			<input ng-show="game_started" type="text" class="tag_name" ng-model="tag_name" ng-enter="add_tag()" placeholder="Provide tag and press enter">
+			<span ng-hide="game_started" style="margin-top: 10px; display: inline-block; color: #333; text-align: center; width: 300px;">Game will start soon</span>
+		</div>
+	</div>
+</div>
+
+<div class="game_over">
+
+</div>
+
+<div class="timer_container">
+	<div ng-show="game_started" style="margin-bottom: 50px;">
+		<div style="font-size: 13px;">Time Left</div>
+		<span>{{timer}}</span>
+	</div>
+
+	<div style="font-weight: 600; font-size: 18px; margin-bottom: 20px;">Rules</div>
+	<div style="font-weight: 300; font-size: 14px;">
+	The objective is to provide as many keywords as you can to describe the product
+	<p>e.g. pink, shirt, buttons, front pocket</p>
+	</div>
+	<button ng-click="start_game()">Start Game</button>
+
+</div>
+
+<div class="my_tag_container">
+	<table>
+		<tr>
+			<td>Total Tags</td>
+			<td><span class="total_tag_count">{{total_tags}}</span></td>
+		</tr>
+
+		<tr>
+			<td>My Tags</td>
+			<td><span class="tag_count">{{my_tags.length}}</span></td>
+		</tr>
+	</table>
+
+	<ul class="ul_my_tags">
+		<li ng-repeat="(key, tag) in my_tags" class="tag">{{tag}}</li>
+	</ul>
+
+	<table>
+		<tr ng-repeat="(user, score) in users" class="user_list">
+			<td>{{user}}</td>
+			<td>{{score}}</td>
+		</tr>
+	</table>
+</div>
+
+<div class="modal_backdrop" ng-show="username == ''"></div>
+
+<script type="text/javascript" src="/javascripts/tagger.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/tagger.css">
+</body>
+</html>
